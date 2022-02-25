@@ -130,13 +130,10 @@ namespace ProyectoPI
                     int pixelGray = (rojo + verde + azul) / 3;
 
                     if (pixelGray > 127)
-                    {
                         pixelGray = 255;
-                    }
                     else
-                    {
                         pixelGray = 0;
-                    }
+                    
                     img.SetPixel(i, j, Color.FromArgb(pixelGray, pixelGray, pixelGray));
                 }
             }
