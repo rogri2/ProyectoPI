@@ -1,0 +1,13 @@
+D:\Repos\ProyectoPI\ProyectoPI\bin\Debug\ProyectoPI.exe.config
+D:\Repos\ProyectoPI\ProyectoPI\bin\Debug\ProyectoPI.exe
+D:\Repos\ProyectoPI\ProyectoPI\bin\Debug\ProyectoPI.pdb
+D:\Repos\ProyectoPI\ProyectoPI\obj\Debug\ProyectoPI.csproj.AssemblyReference.cache
+D:\Repos\ProyectoPI\ProyectoPI\obj\Debug\ProyectoPI.csproj.SuggestedBindingRedirects.cache
+D:\Repos\ProyectoPI\ProyectoPI\obj\Debug\ProyectoPI.ShotoPhop.resources
+D:\Repos\ProyectoPI\ProyectoPI\obj\Debug\ProyectoPI.Form2.resources
+D:\Repos\ProyectoPI\ProyectoPI\obj\Debug\ProyectoPI.Properties.Resources.resources
+D:\Repos\ProyectoPI\ProyectoPI\obj\Debug\ProyectoPI.csproj.GenerateResource.cache
+D:\Repos\ProyectoPI\ProyectoPI\obj\Debug\ProyectoPI.csproj.CoreCompileInputs.cache
+D:\Repos\ProyectoPI\ProyectoPI\obj\Debug\ProyectoPI.exe
+D:\Repos\ProyectoPI\ProyectoPI\obj\Debug\ProyectoPI.pdb
+D:\Repos\ProyectoPI\ProyectoPI\obj\Debug\ProyectoPI.Form3.resources
