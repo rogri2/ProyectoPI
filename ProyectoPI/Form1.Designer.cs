@@ -30,17 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShotoPhop));
             this.panelSideMenu = new System.Windows.Forms.Panel();
-            this.panelLogo = new System.Windows.Forms.Panel();
-            this.editImg = new System.Windows.Forms.Button();
             this.editVideo = new System.Windows.Forms.Button();
+            this.editImg = new System.Windows.Forms.Button();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelSideMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelChildForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSideMenu
@@ -55,31 +55,6 @@
             this.panelSideMenu.Name = "panelSideMenu";
             this.panelSideMenu.Size = new System.Drawing.Size(150, 554);
             this.panelSideMenu.TabIndex = 0;
-            // 
-            // panelLogo
-            // 
-            this.panelLogo.Controls.Add(this.pictureBox1);
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(150, 100);
-            this.panelLogo.TabIndex = 0;
-            // 
-            // editImg
-            // 
-            this.editImg.Dock = System.Windows.Forms.DockStyle.Top;
-            this.editImg.FlatAppearance.BorderSize = 0;
-            this.editImg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editImg.ForeColor = System.Drawing.Color.Gainsboro;
-            this.editImg.Location = new System.Drawing.Point(0, 100);
-            this.editImg.Name = "editImg";
-            this.editImg.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.editImg.Size = new System.Drawing.Size(150, 45);
-            this.editImg.TabIndex = 1;
-            this.editImg.Text = "Editar Imagen";
-            this.editImg.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.editImg.UseVisualStyleBackColor = true;
-            this.editImg.Click += new System.EventHandler(this.editImg_Click);
             // 
             // editVideo
             // 
@@ -97,6 +72,41 @@
             this.editVideo.UseVisualStyleBackColor = true;
             this.editVideo.Click += new System.EventHandler(this.editVideo_Click);
             // 
+            // editImg
+            // 
+            this.editImg.Dock = System.Windows.Forms.DockStyle.Top;
+            this.editImg.FlatAppearance.BorderSize = 0;
+            this.editImg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editImg.ForeColor = System.Drawing.Color.Gainsboro;
+            this.editImg.Location = new System.Drawing.Point(0, 100);
+            this.editImg.Name = "editImg";
+            this.editImg.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.editImg.Size = new System.Drawing.Size(150, 45);
+            this.editImg.TabIndex = 1;
+            this.editImg.Text = "Editar Imagen";
+            this.editImg.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.editImg.UseVisualStyleBackColor = true;
+            this.editImg.Click += new System.EventHandler(this.editImg_Click);
+            // 
+            // panelLogo
+            // 
+            this.panelLogo.Controls.Add(this.pictureBox1);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(150, 100);
+            this.panelLogo.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProyectoPI.Properties.Resources.Shotophop;
+            this.pictureBox1.Location = new System.Drawing.Point(25, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // panelChildForm
             // 
             this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
@@ -109,6 +119,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.Image = global::ProyectoPI.Properties.Resources.Shotophop;
             this.pictureBox2.Location = new System.Drawing.Point(320, 128);
             this.pictureBox2.Name = "pictureBox2";
@@ -116,16 +127,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ProyectoPI.Properties.Resources.Shotophop;
-            this.pictureBox1.Location = new System.Drawing.Point(25, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // ShotoPhop
             // 
@@ -136,16 +137,16 @@
             this.Controls.Add(this.panelSideMenu);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(1083, 593);
             this.Name = "ShotoPhop";
             this.Text = "ShotoPhop";
             this.Load += new System.EventHandler(this.ShotoPhop_Load);
             this.panelSideMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelChildForm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
