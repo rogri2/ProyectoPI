@@ -31,6 +31,9 @@
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.saveImg = new System.Windows.Forms.Button();
             this.panelFiltros = new System.Windows.Forms.Panel();
+            this.filtroTransaparencia = new System.Windows.Forms.Button();
+            this.filtroSepia = new System.Windows.Forms.Button();
+            this.filtroNegativo = new System.Windows.Forms.Button();
             this.filtroBinario = new System.Windows.Forms.Button();
             this.filtroGris = new System.Windows.Forms.Button();
             this.menuFiltros = new System.Windows.Forms.Button();
@@ -40,9 +43,6 @@
             this.imgResult = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.filtroNegativo = new System.Windows.Forms.Button();
-            this.filtroSepia = new System.Windows.Forms.Button();
-            this.filtroTransaparencia = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelFiltros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgOrigen)).BeginInit();
@@ -77,6 +77,7 @@
             this.saveImg.Text = "Guardar Imagen";
             this.saveImg.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.saveImg.UseVisualStyleBackColor = true;
+            this.saveImg.Click += new System.EventHandler(this.saveImg_Click);
             // 
             // panelFiltros
             // 
@@ -91,6 +92,54 @@
             this.panelFiltros.Name = "panelFiltros";
             this.panelFiltros.Size = new System.Drawing.Size(150, 209);
             this.panelFiltros.TabIndex = 3;
+            // 
+            // filtroTransaparencia
+            // 
+            this.filtroTransaparencia.Dock = System.Windows.Forms.DockStyle.Top;
+            this.filtroTransaparencia.FlatAppearance.BorderSize = 0;
+            this.filtroTransaparencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.filtroTransaparencia.ForeColor = System.Drawing.Color.Gainsboro;
+            this.filtroTransaparencia.Location = new System.Drawing.Point(0, 160);
+            this.filtroTransaparencia.Name = "filtroTransaparencia";
+            this.filtroTransaparencia.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.filtroTransaparencia.Size = new System.Drawing.Size(150, 40);
+            this.filtroTransaparencia.TabIndex = 7;
+            this.filtroTransaparencia.Text = "Transaprencia";
+            this.filtroTransaparencia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.filtroTransaparencia.UseVisualStyleBackColor = true;
+            this.filtroTransaparencia.Click += new System.EventHandler(this.filtroTransaparencia_Click);
+            // 
+            // filtroSepia
+            // 
+            this.filtroSepia.Dock = System.Windows.Forms.DockStyle.Top;
+            this.filtroSepia.FlatAppearance.BorderSize = 0;
+            this.filtroSepia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.filtroSepia.ForeColor = System.Drawing.Color.Gainsboro;
+            this.filtroSepia.Location = new System.Drawing.Point(0, 120);
+            this.filtroSepia.Name = "filtroSepia";
+            this.filtroSepia.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.filtroSepia.Size = new System.Drawing.Size(150, 40);
+            this.filtroSepia.TabIndex = 6;
+            this.filtroSepia.Text = "Sepia";
+            this.filtroSepia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.filtroSepia.UseVisualStyleBackColor = true;
+            this.filtroSepia.Click += new System.EventHandler(this.filtroSepia_Click);
+            // 
+            // filtroNegativo
+            // 
+            this.filtroNegativo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.filtroNegativo.FlatAppearance.BorderSize = 0;
+            this.filtroNegativo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.filtroNegativo.ForeColor = System.Drawing.Color.Gainsboro;
+            this.filtroNegativo.Location = new System.Drawing.Point(0, 80);
+            this.filtroNegativo.Name = "filtroNegativo";
+            this.filtroNegativo.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.filtroNegativo.Size = new System.Drawing.Size(150, 40);
+            this.filtroNegativo.TabIndex = 5;
+            this.filtroNegativo.Text = "Negativo";
+            this.filtroNegativo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.filtroNegativo.UseVisualStyleBackColor = true;
+            this.filtroNegativo.Click += new System.EventHandler(this.filtroNegativo_Click);
             // 
             // filtroBinario
             // 
@@ -210,54 +259,6 @@
             this.label2.Size = new System.Drawing.Size(72, 17);
             this.label2.TabIndex = 9;
             this.label2.Text = "Resultado";
-            // 
-            // filtroNegativo
-            // 
-            this.filtroNegativo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.filtroNegativo.FlatAppearance.BorderSize = 0;
-            this.filtroNegativo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.filtroNegativo.ForeColor = System.Drawing.Color.Gainsboro;
-            this.filtroNegativo.Location = new System.Drawing.Point(0, 80);
-            this.filtroNegativo.Name = "filtroNegativo";
-            this.filtroNegativo.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.filtroNegativo.Size = new System.Drawing.Size(150, 40);
-            this.filtroNegativo.TabIndex = 5;
-            this.filtroNegativo.Text = "Negativo";
-            this.filtroNegativo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.filtroNegativo.UseVisualStyleBackColor = true;
-            this.filtroNegativo.Click += new System.EventHandler(this.filtroNegativo_Click);
-            // 
-            // filtroSepia
-            // 
-            this.filtroSepia.Dock = System.Windows.Forms.DockStyle.Top;
-            this.filtroSepia.FlatAppearance.BorderSize = 0;
-            this.filtroSepia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.filtroSepia.ForeColor = System.Drawing.Color.Gainsboro;
-            this.filtroSepia.Location = new System.Drawing.Point(0, 120);
-            this.filtroSepia.Name = "filtroSepia";
-            this.filtroSepia.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.filtroSepia.Size = new System.Drawing.Size(150, 40);
-            this.filtroSepia.TabIndex = 6;
-            this.filtroSepia.Text = "Sepia";
-            this.filtroSepia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.filtroSepia.UseVisualStyleBackColor = true;
-            this.filtroSepia.Click += new System.EventHandler(this.filtroSepia_Click);
-            // 
-            // filtroTransaparencia
-            // 
-            this.filtroTransaparencia.Dock = System.Windows.Forms.DockStyle.Top;
-            this.filtroTransaparencia.FlatAppearance.BorderSize = 0;
-            this.filtroTransaparencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.filtroTransaparencia.ForeColor = System.Drawing.Color.Gainsboro;
-            this.filtroTransaparencia.Location = new System.Drawing.Point(0, 160);
-            this.filtroTransaparencia.Name = "filtroTransaparencia";
-            this.filtroTransaparencia.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.filtroTransaparencia.Size = new System.Drawing.Size(150, 40);
-            this.filtroTransaparencia.TabIndex = 7;
-            this.filtroTransaparencia.Text = "Transaprencia";
-            this.filtroTransaparencia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.filtroTransaparencia.UseVisualStyleBackColor = true;
-            this.filtroTransaparencia.Click += new System.EventHandler(this.filtroTransaparencia_Click);
             // 
             // Form2
             // 

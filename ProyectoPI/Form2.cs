@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Imaging;
 
 namespace ProyectoPI
 {
@@ -34,6 +35,11 @@ namespace ProyectoPI
             loadImg(imgOrigen);
         }
 
+        private void saveImg_Click(object sender, EventArgs e)
+        {
+            saveImage(imgResult);
+        }
+
         private void filtroGris_Click(object sender, EventArgs e)
         {
             useFilter(imgOrigen, imgResult, gray);
@@ -48,19 +54,19 @@ namespace ProyectoPI
 
         private void filtroNegativo_Click(object sender, EventArgs e)
         {
-            //useFilter(imgOrigen, imgResult, negativo);
+            useFilter(imgOrigen, imgResult, negativo);
             toggleSubmenu(panelFiltros);
         }
 
         private void filtroSepia_Click(object sender, EventArgs e)
         {
-            //useFilter(imgOrigen, imgResult, sepia);
+            useFilter(imgOrigen, imgResult, sepia);
             toggleSubmenu(panelFiltros);
         }
 
         private void filtroTransaparencia_Click(object sender, EventArgs e)
         {
-            //useFilter(imgOrigen, imgResult, transparencia);
+            useFilter(imgOrigen, imgResult, transparencia);
             toggleSubmenu(panelFiltros);
         }
 
@@ -143,19 +149,70 @@ namespace ProyectoPI
 
         private int negativo(Bitmap img)
         {
-            // Code
+            for (int i = 0; i < img.Width; i++)
+            {
+                for (int j = 0; j < img.Height; j++)
+                {
+                    Color pixelRGB = img.GetPixel(i, j);
+
+                    int alfa = pixelRGB.A;
+                    int rojo = 255- pixelRGB.R;
+                    int verde = 255- pixelRGB.G;
+                    int azul = 255- pixelRGB.B;
+
+                    img.SetPixel(i, j, Color.FromArgb(alfa, rojo, verde, azul));
+
+                }
+            }
             return 0;
         }
 
         private int sepia(Bitmap img)
         {
-            // Code
+            for (int i = 0; i < img.Width; i++)
+            {
+                for (int j = 0; j < img.Height; j++)
+                {
+                    Color pixelRGB = img.GetPixel(i, j);
+
+                    int alfa = pixelRGB.A;
+                    int rojo = pixelRGB.R;
+                    int verde = pixelRGB.G;
+                    int azul = pixelRGB.B;
+
+                    int tr = (int)((0.393 * rojo) + (0.769 * verde) + (0.189 * azul));
+                    int tg = (int)((0.349 * rojo) + (0.686 * verde) + (0.168 * azul));
+                    int tb = (int)((0.272 * rojo) + (0.534 * verde) + (0.131 * azul));
+
+                    rojo = tr > 255 ? 255 : tr;
+                    verde = tg > 255 ? 255 : tg;
+                    azul = tb > 255 ? 255 : tb;
+
+                    img.SetPixel(i, j, Color.FromArgb(alfa, rojo, verde, azul));
+
+                }
+            }
             return 0;
         }
 
         private int transparencia(Bitmap img)
         {
-            // Code
+            for (int i = 0; i < img.Width; i++)
+            {
+                for (int j = 0; j < img.Height; j++)
+                {
+                    Color pixelRGB = img.GetPixel(i, j);
+
+                    int rojo = pixelRGB.R;
+                    int verde = pixelRGB.G;
+                    int azul = pixelRGB.B;
+
+                    int pixelAlpha = 100;
+
+                    img.SetPixel(i, j, Color.FromArgb(pixelAlpha, rojo, verde, azul));
+
+                }
+            }
             return 0;
         }
 
@@ -186,7 +243,32 @@ namespace ProyectoPI
                 
         }
 
-        #endregion
+        private void saveImage(PictureBox img)
+        {
+            if (img.Image != null)
+            {
+                SaveFileDialog sfd = new SaveFileDialog();
+                sfd.Filter = "PNG|*.png|JPG|*.jpg";
+                ImageFormat format = ImageFormat.Jpeg;
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    string ext = System.IO.Path.GetExtension(sfd.FileName);
+                    switch (ext)
+                    {
+                        case ".jpg":
+                            format = ImageFormat.Jpeg;
+                            break;
+                        case ".png":
+                            format = ImageFormat.Png;
+                            break;
+                    }
+                    img.Image.Save(sfd.FileName, format);
+                }
+            }
+            else
+                MessageBox.Show("Se debe de aplicar un filtro a una imagen", "Error", MessageBoxButtons.OK);
+        }
 
+        #endregion
     }
 }
