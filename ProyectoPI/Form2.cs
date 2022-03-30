@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Imaging;
+using AForge;
+using AForge.Math;
 
 namespace ProyectoPI
 {
@@ -95,6 +97,7 @@ namespace ProyectoPI
             Bitmap img = new Bitmap(org.Image);
             filtro(img);
             res.Image = img;
+            refreshHistograms(res);
         }
 
         #endregion
@@ -236,6 +239,7 @@ namespace ProyectoPI
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 org.Image = new Bitmap(ofd.FileName);
+                refreshHistograms(org);
                 return true;
             }
             else
@@ -267,6 +271,33 @@ namespace ProyectoPI
             }
             else
                 MessageBox.Show("Se debe de aplicar un filtro a una imagen", "Error", MessageBoxButtons.OK);
+        }
+
+        private void refreshHistograms(PictureBox image)
+        {
+            Bitmap bmp = new Bitmap(image.Image);
+
+            int[] red = new int[256];
+            int[] green = new int[256];
+            int[] blue = new int[256];
+
+            for (int i = 0; i < bmp.Width; i++)
+            {
+                for (int j = 0; j < bmp.Height; j++)
+                {
+
+                    Color color = bmp.GetPixel(i, j);
+                    red[color.R]++;
+                    green[color.G]++;
+                    blue[color.B]++;
+                }
+            }
+            histogramRed.Values = red;
+            histogramRed.Color = Color.Red;
+            histogramGreen.Values = green;
+            histogramGreen.Color = Color.Green;
+            histogramBlue.Values = blue;
+            histogramBlue.Color = Color.Blue;
         }
 
         #endregion

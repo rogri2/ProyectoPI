@@ -43,6 +43,9 @@
             this.imgResult = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.histogramRed = new AForge.Controls.Histogram();
+            this.histogramGreen = new AForge.Controls.Histogram();
+            this.histogramBlue = new AForge.Controls.Histogram();
             this.panelSideMenu.SuspendLayout();
             this.panelFiltros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgOrigen)).BeginInit();
@@ -260,11 +263,41 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "Resultado";
             // 
+            // histogramRed
+            // 
+            this.histogramRed.Location = new System.Drawing.Point(589, 56);
+            this.histogramRed.Name = "histogramRed";
+            this.histogramRed.Size = new System.Drawing.Size(298, 139);
+            this.histogramRed.TabIndex = 10;
+            this.histogramRed.Text = "histogramRed";
+            this.histogramRed.Values = null;
+            // 
+            // histogramGreen
+            // 
+            this.histogramGreen.Location = new System.Drawing.Point(589, 216);
+            this.histogramGreen.Name = "histogramGreen";
+            this.histogramGreen.Size = new System.Drawing.Size(298, 139);
+            this.histogramGreen.TabIndex = 11;
+            this.histogramGreen.Text = "histogramRed";
+            this.histogramGreen.Values = null;
+            // 
+            // histogramBlue
+            // 
+            this.histogramBlue.Location = new System.Drawing.Point(589, 381);
+            this.histogramBlue.Name = "histogramBlue";
+            this.histogramBlue.Size = new System.Drawing.Size(298, 139);
+            this.histogramBlue.TabIndex = 12;
+            this.histogramBlue.Text = "histogramRed";
+            this.histogramBlue.Values = null;
+            // 
             // Form2
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(917, 554);
+            this.Controls.Add(this.histogramBlue);
+            this.Controls.Add(this.histogramGreen);
+            this.Controls.Add(this.histogramRed);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.imgResult);
@@ -302,5 +335,8 @@
         private System.Windows.Forms.Button filtroTransaparencia;
         private System.Windows.Forms.Button filtroSepia;
         private System.Windows.Forms.Button filtroNegativo;
+        private AForge.Controls.Histogram histogramRed;
+        private AForge.Controls.Histogram histogramGreen;
+        private AForge.Controls.Histogram histogramBlue;
     }
 }
