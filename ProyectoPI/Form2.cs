@@ -285,13 +285,13 @@ namespace ProyectoPI
             {
                 for (int j = 0; j < bmp.Height; j++)
                 {
-
                     Color color = bmp.GetPixel(i, j);
                     red[color.R]++;
                     green[color.G]++;
                     blue[color.B]++;
                 }
             }
+
             histogramRed.Values = red;
             histogramRed.Color = Color.Red;
             histogramGreen.Values = green;
