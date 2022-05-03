@@ -30,15 +30,16 @@
         {
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.panelFiltros = new System.Windows.Forms.Panel();
+            this.filtroTransaparencia = new System.Windows.Forms.Button();
+            this.filtroSepia = new System.Windows.Forms.Button();
+            this.filtroNegativo = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.menuFiltros = new System.Windows.Forms.Button();
             this.cargaVid = new System.Windows.Forms.Button();
             this.closeBtn = new System.Windows.Forms.Button();
             this.vidOrigen = new System.Windows.Forms.PictureBox();
-            this.filtroNegativo = new System.Windows.Forms.Button();
-            this.filtroSepia = new System.Windows.Forms.Button();
-            this.filtroTransaparencia = new System.Windows.Forms.Button();
+            this.playVid = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelFiltros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vidOrigen)).BeginInit();
@@ -48,6 +49,7 @@
             // 
             this.panelSideMenu.AutoScroll = true;
             this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.panelSideMenu.Controls.Add(this.playVid);
             this.panelSideMenu.Controls.Add(this.panelFiltros);
             this.panelSideMenu.Controls.Add(this.menuFiltros);
             this.panelSideMenu.Controls.Add(this.cargaVid);
@@ -70,6 +72,51 @@
             this.panelFiltros.Name = "panelFiltros";
             this.panelFiltros.Size = new System.Drawing.Size(150, 207);
             this.panelFiltros.TabIndex = 3;
+            // 
+            // filtroTransaparencia
+            // 
+            this.filtroTransaparencia.Dock = System.Windows.Forms.DockStyle.Top;
+            this.filtroTransaparencia.FlatAppearance.BorderSize = 0;
+            this.filtroTransaparencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.filtroTransaparencia.ForeColor = System.Drawing.Color.Gainsboro;
+            this.filtroTransaparencia.Location = new System.Drawing.Point(0, 160);
+            this.filtroTransaparencia.Name = "filtroTransaparencia";
+            this.filtroTransaparencia.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.filtroTransaparencia.Size = new System.Drawing.Size(150, 40);
+            this.filtroTransaparencia.TabIndex = 8;
+            this.filtroTransaparencia.Text = "Transaprencia";
+            this.filtroTransaparencia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.filtroTransaparencia.UseVisualStyleBackColor = true;
+            // 
+            // filtroSepia
+            // 
+            this.filtroSepia.Dock = System.Windows.Forms.DockStyle.Top;
+            this.filtroSepia.FlatAppearance.BorderSize = 0;
+            this.filtroSepia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.filtroSepia.ForeColor = System.Drawing.Color.Gainsboro;
+            this.filtroSepia.Location = new System.Drawing.Point(0, 120);
+            this.filtroSepia.Name = "filtroSepia";
+            this.filtroSepia.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.filtroSepia.Size = new System.Drawing.Size(150, 40);
+            this.filtroSepia.TabIndex = 7;
+            this.filtroSepia.Text = "Sepia";
+            this.filtroSepia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.filtroSepia.UseVisualStyleBackColor = true;
+            // 
+            // filtroNegativo
+            // 
+            this.filtroNegativo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.filtroNegativo.FlatAppearance.BorderSize = 0;
+            this.filtroNegativo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.filtroNegativo.ForeColor = System.Drawing.Color.Gainsboro;
+            this.filtroNegativo.Location = new System.Drawing.Point(0, 80);
+            this.filtroNegativo.Name = "filtroNegativo";
+            this.filtroNegativo.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.filtroNegativo.Size = new System.Drawing.Size(150, 40);
+            this.filtroNegativo.TabIndex = 6;
+            this.filtroNegativo.Text = "Negativo";
+            this.filtroNegativo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.filtroNegativo.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -131,6 +178,7 @@
             this.cargaVid.Text = "Cargar Video";
             this.cargaVid.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cargaVid.UseVisualStyleBackColor = true;
+            this.cargaVid.Click += new System.EventHandler(this.cargaVid_Click);
             // 
             // closeBtn
             // 
@@ -149,58 +197,32 @@
             // 
             // vidOrigen
             // 
+            this.vidOrigen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.vidOrigen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.vidOrigen.Location = new System.Drawing.Point(217, 45);
+            this.vidOrigen.Location = new System.Drawing.Point(173, 72);
             this.vidOrigen.Name = "vidOrigen";
-            this.vidOrigen.Size = new System.Drawing.Size(640, 480);
+            this.vidOrigen.Size = new System.Drawing.Size(720, 405);
             this.vidOrigen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.vidOrigen.TabIndex = 7;
             this.vidOrigen.TabStop = false;
             // 
-            // filtroNegativo
+            // playVid
             // 
-            this.filtroNegativo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.filtroNegativo.FlatAppearance.BorderSize = 0;
-            this.filtroNegativo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.filtroNegativo.ForeColor = System.Drawing.Color.Gainsboro;
-            this.filtroNegativo.Location = new System.Drawing.Point(0, 80);
-            this.filtroNegativo.Name = "filtroNegativo";
-            this.filtroNegativo.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.filtroNegativo.Size = new System.Drawing.Size(150, 40);
-            this.filtroNegativo.TabIndex = 6;
-            this.filtroNegativo.Text = "Negativo";
-            this.filtroNegativo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.filtroNegativo.UseVisualStyleBackColor = true;
-            // 
-            // filtroSepia
-            // 
-            this.filtroSepia.Dock = System.Windows.Forms.DockStyle.Top;
-            this.filtroSepia.FlatAppearance.BorderSize = 0;
-            this.filtroSepia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.filtroSepia.ForeColor = System.Drawing.Color.Gainsboro;
-            this.filtroSepia.Location = new System.Drawing.Point(0, 120);
-            this.filtroSepia.Name = "filtroSepia";
-            this.filtroSepia.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.filtroSepia.Size = new System.Drawing.Size(150, 40);
-            this.filtroSepia.TabIndex = 7;
-            this.filtroSepia.Text = "Sepia";
-            this.filtroSepia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.filtroSepia.UseVisualStyleBackColor = true;
-            // 
-            // filtroTransaparencia
-            // 
-            this.filtroTransaparencia.Dock = System.Windows.Forms.DockStyle.Top;
-            this.filtroTransaparencia.FlatAppearance.BorderSize = 0;
-            this.filtroTransaparencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.filtroTransaparencia.ForeColor = System.Drawing.Color.Gainsboro;
-            this.filtroTransaparencia.Location = new System.Drawing.Point(0, 160);
-            this.filtroTransaparencia.Name = "filtroTransaparencia";
-            this.filtroTransaparencia.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.filtroTransaparencia.Size = new System.Drawing.Size(150, 40);
-            this.filtroTransaparencia.TabIndex = 8;
-            this.filtroTransaparencia.Text = "Transaprencia";
-            this.filtroTransaparencia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.filtroTransaparencia.UseVisualStyleBackColor = true;
+            this.playVid.Dock = System.Windows.Forms.DockStyle.Top;
+            this.playVid.FlatAppearance.BorderSize = 0;
+            this.playVid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.playVid.ForeColor = System.Drawing.Color.Gainsboro;
+            this.playVid.Location = new System.Drawing.Point(0, 297);
+            this.playVid.Name = "playVid";
+            this.playVid.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.playVid.Size = new System.Drawing.Size(150, 45);
+            this.playVid.TabIndex = 4;
+            this.playVid.Text = "Play Video";
+            this.playVid.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.playVid.UseVisualStyleBackColor = true;
+            this.playVid.Click += new System.EventHandler(this.playVid_Click);
             // 
             // Form3
             // 
@@ -235,5 +257,6 @@
         private System.Windows.Forms.Button filtroNegativo;
         private System.Windows.Forms.Button filtroSepia;
         private System.Windows.Forms.Button filtroTransaparencia;
+        private System.Windows.Forms.Button playVid;
     }
 }
