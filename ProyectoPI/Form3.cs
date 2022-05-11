@@ -61,7 +61,7 @@ namespace ProyectoPI
 
         private void filtroBinario_Click(object sender, EventArgs e)
         {
-            filtro = "binario";
+            filtro = "nocturna";
             playVideoMain();
             toggleSubmenu(panelFiltros);
         }
@@ -147,7 +147,7 @@ namespace ProyectoPI
                         applyFilter(cmPicture);
                         break;
                     }
-                case "binario":
+                case "nocturna":
                     {
                         ColorMatrix cmPicture = new ColorMatrix(new float[][]
                         {

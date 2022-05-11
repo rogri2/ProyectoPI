@@ -34,7 +34,7 @@
             this.filtroTransaparencia = new System.Windows.Forms.Button();
             this.filtroSepia = new System.Windows.Forms.Button();
             this.filtroNegativo = new System.Windows.Forms.Button();
-            this.filtroBinario = new System.Windows.Forms.Button();
+            this.filtroNocturna = new System.Windows.Forms.Button();
             this.filtroGris = new System.Windows.Forms.Button();
             this.menuFiltros = new System.Windows.Forms.Button();
             this.cargaVid = new System.Windows.Forms.Button();
@@ -65,7 +65,7 @@
             this.playVid.FlatAppearance.BorderSize = 0;
             this.playVid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.playVid.ForeColor = System.Drawing.Color.Gainsboro;
-            this.playVid.Location = new System.Drawing.Point(0, 297);
+            this.playVid.Location = new System.Drawing.Point(0, 321);
             this.playVid.Name = "playVid";
             this.playVid.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.playVid.Size = new System.Drawing.Size(150, 45);
@@ -81,12 +81,12 @@
             this.panelFiltros.Controls.Add(this.filtroTransaparencia);
             this.panelFiltros.Controls.Add(this.filtroSepia);
             this.panelFiltros.Controls.Add(this.filtroNegativo);
-            this.panelFiltros.Controls.Add(this.filtroBinario);
+            this.panelFiltros.Controls.Add(this.filtroNocturna);
             this.panelFiltros.Controls.Add(this.filtroGris);
             this.panelFiltros.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelFiltros.Location = new System.Drawing.Point(0, 90);
             this.panelFiltros.Name = "panelFiltros";
-            this.panelFiltros.Size = new System.Drawing.Size(150, 207);
+            this.panelFiltros.Size = new System.Drawing.Size(150, 231);
             this.panelFiltros.TabIndex = 3;
             // 
             // filtroTransaparencia
@@ -95,7 +95,7 @@
             this.filtroTransaparencia.FlatAppearance.BorderSize = 0;
             this.filtroTransaparencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.filtroTransaparencia.ForeColor = System.Drawing.Color.Gainsboro;
-            this.filtroTransaparencia.Location = new System.Drawing.Point(0, 160);
+            this.filtroTransaparencia.Location = new System.Drawing.Point(0, 182);
             this.filtroTransaparencia.Name = "filtroTransaparencia";
             this.filtroTransaparencia.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.filtroTransaparencia.Size = new System.Drawing.Size(150, 40);
@@ -111,7 +111,7 @@
             this.filtroSepia.FlatAppearance.BorderSize = 0;
             this.filtroSepia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.filtroSepia.ForeColor = System.Drawing.Color.Gainsboro;
-            this.filtroSepia.Location = new System.Drawing.Point(0, 120);
+            this.filtroSepia.Location = new System.Drawing.Point(0, 142);
             this.filtroSepia.Name = "filtroSepia";
             this.filtroSepia.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.filtroSepia.Size = new System.Drawing.Size(150, 40);
@@ -127,7 +127,7 @@
             this.filtroNegativo.FlatAppearance.BorderSize = 0;
             this.filtroNegativo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.filtroNegativo.ForeColor = System.Drawing.Color.Gainsboro;
-            this.filtroNegativo.Location = new System.Drawing.Point(0, 80);
+            this.filtroNegativo.Location = new System.Drawing.Point(0, 102);
             this.filtroNegativo.Name = "filtroNegativo";
             this.filtroNegativo.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.filtroNegativo.Size = new System.Drawing.Size(150, 40);
@@ -137,21 +137,21 @@
             this.filtroNegativo.UseVisualStyleBackColor = true;
             this.filtroNegativo.Click += new System.EventHandler(this.filtroNegativo_Click);
             // 
-            // filtroBinario
+            // filtroNocturna
             // 
-            this.filtroBinario.Dock = System.Windows.Forms.DockStyle.Top;
-            this.filtroBinario.FlatAppearance.BorderSize = 0;
-            this.filtroBinario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.filtroBinario.ForeColor = System.Drawing.Color.Gainsboro;
-            this.filtroBinario.Location = new System.Drawing.Point(0, 40);
-            this.filtroBinario.Name = "filtroBinario";
-            this.filtroBinario.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.filtroBinario.Size = new System.Drawing.Size(150, 40);
-            this.filtroBinario.TabIndex = 4;
-            this.filtroBinario.Text = "Binario";
-            this.filtroBinario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.filtroBinario.UseVisualStyleBackColor = true;
-            this.filtroBinario.Click += new System.EventHandler(this.filtroBinario_Click);
+            this.filtroNocturna.Dock = System.Windows.Forms.DockStyle.Top;
+            this.filtroNocturna.FlatAppearance.BorderSize = 0;
+            this.filtroNocturna.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.filtroNocturna.ForeColor = System.Drawing.Color.Gainsboro;
+            this.filtroNocturna.Location = new System.Drawing.Point(0, 40);
+            this.filtroNocturna.Name = "filtroNocturna";
+            this.filtroNocturna.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.filtroNocturna.Size = new System.Drawing.Size(150, 62);
+            this.filtroNocturna.TabIndex = 4;
+            this.filtroNocturna.Text = "Visión Nocturna";
+            this.filtroNocturna.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.filtroNocturna.UseVisualStyleBackColor = true;
+            this.filtroNocturna.Click += new System.EventHandler(this.filtroBinario_Click);
             // 
             // filtroGris
             // 
@@ -253,7 +253,7 @@
 
         private System.Windows.Forms.Panel panelSideMenu;
         private System.Windows.Forms.Panel panelFiltros;
-        private System.Windows.Forms.Button filtroBinario;
+        private System.Windows.Forms.Button filtroNocturna;
         private System.Windows.Forms.Button filtroGris;
         private System.Windows.Forms.Button menuFiltros;
         private System.Windows.Forms.Button cargaVid;
