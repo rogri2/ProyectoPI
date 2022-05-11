@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.panelSideMenu = new System.Windows.Forms.Panel();
+            this.playVid = new System.Windows.Forms.Button();
             this.panelFiltros = new System.Windows.Forms.Panel();
             this.filtroTransaparencia = new System.Windows.Forms.Button();
             this.filtroSepia = new System.Windows.Forms.Button();
             this.filtroNegativo = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.filtroBinario = new System.Windows.Forms.Button();
+            this.filtroGris = new System.Windows.Forms.Button();
             this.menuFiltros = new System.Windows.Forms.Button();
             this.cargaVid = new System.Windows.Forms.Button();
             this.closeBtn = new System.Windows.Forms.Button();
             this.vidOrigen = new System.Windows.Forms.PictureBox();
-            this.playVid = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelFiltros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vidOrigen)).BeginInit();
@@ -59,14 +59,30 @@
             this.panelSideMenu.Size = new System.Drawing.Size(150, 554);
             this.panelSideMenu.TabIndex = 2;
             // 
+            // playVid
+            // 
+            this.playVid.Dock = System.Windows.Forms.DockStyle.Top;
+            this.playVid.FlatAppearance.BorderSize = 0;
+            this.playVid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.playVid.ForeColor = System.Drawing.Color.Gainsboro;
+            this.playVid.Location = new System.Drawing.Point(0, 297);
+            this.playVid.Name = "playVid";
+            this.playVid.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.playVid.Size = new System.Drawing.Size(150, 45);
+            this.playVid.TabIndex = 4;
+            this.playVid.Text = "Play Video";
+            this.playVid.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.playVid.UseVisualStyleBackColor = true;
+            this.playVid.Click += new System.EventHandler(this.playVid_Click);
+            // 
             // panelFiltros
             // 
             this.panelFiltros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.panelFiltros.Controls.Add(this.filtroTransaparencia);
             this.panelFiltros.Controls.Add(this.filtroSepia);
             this.panelFiltros.Controls.Add(this.filtroNegativo);
-            this.panelFiltros.Controls.Add(this.button2);
-            this.panelFiltros.Controls.Add(this.button1);
+            this.panelFiltros.Controls.Add(this.filtroBinario);
+            this.panelFiltros.Controls.Add(this.filtroGris);
             this.panelFiltros.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelFiltros.Location = new System.Drawing.Point(0, 90);
             this.panelFiltros.Name = "panelFiltros";
@@ -87,6 +103,7 @@
             this.filtroTransaparencia.Text = "Transaprencia";
             this.filtroTransaparencia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.filtroTransaparencia.UseVisualStyleBackColor = true;
+            this.filtroTransaparencia.Click += new System.EventHandler(this.filtroTransaparencia_Click);
             // 
             // filtroSepia
             // 
@@ -102,6 +119,7 @@
             this.filtroSepia.Text = "Sepia";
             this.filtroSepia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.filtroSepia.UseVisualStyleBackColor = true;
+            this.filtroSepia.Click += new System.EventHandler(this.filtroSepia_Click);
             // 
             // filtroNegativo
             // 
@@ -117,36 +135,39 @@
             this.filtroNegativo.Text = "Negativo";
             this.filtroNegativo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.filtroNegativo.UseVisualStyleBackColor = true;
+            this.filtroNegativo.Click += new System.EventHandler(this.filtroNegativo_Click);
             // 
-            // button2
+            // filtroBinario
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button2.Location = new System.Drawing.Point(0, 40);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(150, 40);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Binario";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
+            this.filtroBinario.Dock = System.Windows.Forms.DockStyle.Top;
+            this.filtroBinario.FlatAppearance.BorderSize = 0;
+            this.filtroBinario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.filtroBinario.ForeColor = System.Drawing.Color.Gainsboro;
+            this.filtroBinario.Location = new System.Drawing.Point(0, 40);
+            this.filtroBinario.Name = "filtroBinario";
+            this.filtroBinario.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.filtroBinario.Size = new System.Drawing.Size(150, 40);
+            this.filtroBinario.TabIndex = 4;
+            this.filtroBinario.Text = "Binario";
+            this.filtroBinario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.filtroBinario.UseVisualStyleBackColor = true;
+            this.filtroBinario.Click += new System.EventHandler(this.filtroBinario_Click);
             // 
-            // button1
+            // filtroGris
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(150, 40);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Grises";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
+            this.filtroGris.Dock = System.Windows.Forms.DockStyle.Top;
+            this.filtroGris.FlatAppearance.BorderSize = 0;
+            this.filtroGris.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.filtroGris.ForeColor = System.Drawing.Color.Gainsboro;
+            this.filtroGris.Location = new System.Drawing.Point(0, 0);
+            this.filtroGris.Name = "filtroGris";
+            this.filtroGris.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.filtroGris.Size = new System.Drawing.Size(150, 40);
+            this.filtroGris.TabIndex = 3;
+            this.filtroGris.Text = "Grises";
+            this.filtroGris.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.filtroGris.UseVisualStyleBackColor = true;
+            this.filtroGris.Click += new System.EventHandler(this.filtroGris_Click);
             // 
             // menuFiltros
             // 
@@ -208,22 +229,6 @@
             this.vidOrigen.TabIndex = 7;
             this.vidOrigen.TabStop = false;
             // 
-            // playVid
-            // 
-            this.playVid.Dock = System.Windows.Forms.DockStyle.Top;
-            this.playVid.FlatAppearance.BorderSize = 0;
-            this.playVid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.playVid.ForeColor = System.Drawing.Color.Gainsboro;
-            this.playVid.Location = new System.Drawing.Point(0, 297);
-            this.playVid.Name = "playVid";
-            this.playVid.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.playVid.Size = new System.Drawing.Size(150, 45);
-            this.playVid.TabIndex = 4;
-            this.playVid.Text = "Play Video";
-            this.playVid.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.playVid.UseVisualStyleBackColor = true;
-            this.playVid.Click += new System.EventHandler(this.playVid_Click);
-            // 
             // Form3
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -248,8 +253,8 @@
 
         private System.Windows.Forms.Panel panelSideMenu;
         private System.Windows.Forms.Panel panelFiltros;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button filtroBinario;
+        private System.Windows.Forms.Button filtroGris;
         private System.Windows.Forms.Button menuFiltros;
         private System.Windows.Forms.Button cargaVid;
         private System.Windows.Forms.Button closeBtn;
